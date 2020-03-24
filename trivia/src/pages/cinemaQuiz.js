@@ -2,22 +2,27 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import ImageCinema from "../components/imageCinema"
 import SEO from "../components/seo"
 
-const CinemaPage = () => (
+const CinemaQuizPage = () => (
   <Layout>
-    <SEO title="Cinema page" />
-    <h1>Welcome to Cinema category</h1>
+    <SEO title="CinemaQuiz page" />
+    <h1>Welcome to CinemaQuiz</h1>
     <button>
-      <Link to="/cinemaQuiz">click</Link>
+      <Link to="/">click</Link>
     </button>
     <p>If you'd like to play click the button below</p>
     <div style={{ maxWidth: `900px`, marginBottom: `1.45rem` }}>
-      <ImageCinema />
+      <div
+        style={{
+          width: `300px`,
+          height: `200px`,
+          backgroundColor: `lightskyblue`,
+        }}
+      ></div>
     </div>
     <Link to="/">Go back to the homepage</Link>
   </Layout>
 )
 
-export default CinemaPage
+export default CinemaQuizPage
