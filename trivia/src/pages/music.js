@@ -10,6 +10,9 @@ const MusicPage = () => (
     <SEO title="Cinema page" />
     <h1>Welcome to Music category</h1>
     <p>If you'd like to play click the button below</p>
+    <button>
+      <Link to="/musicQuiz">click</Link>
+    </button>
     <ImageMusic />
     <Link to="/">Go back to the homepage</Link>
   </Layout>

@@ -15,19 +15,17 @@ class CinemaQuizPage extends Component {
     this.fetchData()
   }
   fetchData = () => {
-    fetch(
-      "https://opentdb.com/api.php?amount=10&category=11&difficulty=medium&type=multiple",
-      {
-        method: "GET",
-        dataType: "JSON",
-      }
-    )
+    fetch("https://icanhazdadjoke.com/", {
+      headers: {
+        Accept: "application/json",
+      },
+    })
       .then(res => {
         return res.json()
       })
       .then(jsonData => {
         this.setState({
-          data: jsonData.results[0].question,
+          data: jsonData.joke,
           loading: false,
         })
         console.log(jsonData)
