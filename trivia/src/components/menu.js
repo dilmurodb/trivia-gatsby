@@ -19,13 +19,13 @@ const Menu = () => (
         <Link to="/about">About</Link>
       </li>
       <li>
-        <Link to="/cinema">Cinema</Link>
+        <Link to="/joke">Random Jokes</Link>
       </li>
       <li>
-        <Link to="/music">Music</Link>
+        <Link to="/cat">Random Cat Pictures</Link>
       </li>
       <li>
-        <Link to="/geography">Geography</Link>
+        <Link to="/activity">Random Suggestions</Link>
       </li>
     </ul>
   </div>
