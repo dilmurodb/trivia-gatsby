@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
+import ImageCinema from "../components/imageCinema"
 import SEO from "../components/seo"
 
 const CinemaPage = () => (
@@ -9,6 +10,9 @@ const CinemaPage = () => (
     <SEO title="Cinema page" />
     <h1>Welcome to Cinema category</h1>
     <p>If you'd like to play click the button below</p>
+    <div style={{ maxWidth: `900px`, marginBottom: `1.45rem` }}>
+      <ImageCinema />
+    </div>
     <Link to="/">Go back to the homepage</Link>
   </Layout>
 )
