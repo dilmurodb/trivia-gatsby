@@ -6,6 +6,7 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
 library.add(fab, fas, far);
 const Footer = () => (
   <div>
@@ -41,22 +42,22 @@ const Footer = () => (
           </div>
           <div>
             <a
+              href="https://www.dbukharov.com/"
+              target="_blank"
+              rel="noopener"
+              style={{ color: `white` }}
+            >
+              <FontAwesomeIcon icon={faBriefcase} size="3x" />
+            </a>
+          </div>
+          <div style={{ marginLeft: `10px` }}>
+            <a
               href="https://github.com/dilmurodb"
               target="_blank"
               rel="noopener"
               style={{ color: `white` }}
             >
               <FontAwesomeIcon icon={["fab", "github-square"]} size="3x" />
-            </a>
-          </div>
-          <div style={{ marginLeft: `10px` }}>
-            <a
-              href="https://medium.com/@dilmurod.bukharov"
-              target="_blank"
-              rel="noopener"
-              style={{ color: `white` }}
-            >
-              <FontAwesomeIcon icon={["fab", "medium"]} size="3x" />
             </a>
           </div>
         </div>
