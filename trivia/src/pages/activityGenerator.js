@@ -15,11 +15,7 @@ class ActivityGeneratorPage extends Component {
     this.fetchData()
   }
   fetchData = () => {
-    fetch("http://www.boredapi.com/api/activity/", {
-      //   headers: {
-      //     "x-api-key": "369c4b71-4927-4bea-bd18-161e8cc3d3ba",
-      //   },
-    })
+    fetch("http://www.boredapi.com/api/activity/")
       .then(res => {
         return res.json()
       })
@@ -39,23 +35,27 @@ class ActivityGeneratorPage extends Component {
     console.log(`this is what I need ${data}`)
     return (
       <Layout>
-        <SEO title="GeoQuiz page" />
-        <h1>Welcome to GeoQuiz</h1>
-        <button onClick={this.fetchData}>click</button>
-        <p>If you'd like to play click the button below</p>
+        <SEO title="ActivitySuggestions page" />
+        <h1>Random Activity Suggestions</h1>
+        <p>
+          If you'd like to see more suggestions please click the button below!
+        </p>
+        <button onClick={this.fetchData} style={{ marginBottom: `20px` }}>
+          click
+        </button>
         <div style={{ maxWidth: `900px`, marginBottom: `1.45rem` }}>
           <div
             style={{
               width: `300px`,
               height: `200px`,
-              backgroundColor: `lightskyblue`,
+              backgroundColor: `lightgrey`,
+              padding: `20px`,
             }}
           >
             <p>{data}</p>
             {/* <img src={data} alt="new"></img> */}
           </div>
         </div>
-        <Link to="/">Go back to the homepage</Link>
       </Layout>
     )
   }

@@ -13,11 +13,21 @@ const CatPage = () => (
       If you'd like to see more of these adorable cats, please click the button
       below
     </p>
-    <button style={{ marginBottom: `20px` }}>
-      <Link to="/catGenerator">click</Link>
+    <button
+      style={{
+        marginBottom: `20px`,
+        backgroundColor: `gold`,
+        fontSize: `20px`,
+      }}
+    >
+      <Link
+        to="/catGenerator"
+        style={{ textDecoration: `none`, padding: `10px` }}
+      >
+        Click
+      </Link>
     </button>
     <ImageCat />
-    <Link to="/">Go back to the homepage</Link>
   </Layout>
 )
 

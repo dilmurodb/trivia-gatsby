@@ -8,13 +8,26 @@ import SEO from "../components/seo"
 const ActivityPage = () => (
   <Layout>
     <SEO title="Cinema page" />
-    <h1>Welcome to Geography category</h1>
-    <p>If you'd like to play click the button below</p>
-    <button>
-      <Link to="/activityGenerator">click</Link>
+    <h2>Are you bored? Here is some activity suggestions for you!</h2>
+    <p>
+      Please click the button below to see some activity suggestions which you
+      might like!
+    </p>
+    <button
+      style={{
+        marginBottom: `20px`,
+        backgroundColor: `gold`,
+        fontSize: `20px`,
+      }}
+    >
+      <Link
+        to="/activityGenerator"
+        style={{ textDecoration: `none`, padding: `10px` }}
+      >
+        Click
+      </Link>
     </button>
     <ImageActivity />
-    <Link to="/">Go back to the homepage</Link>
   </Layout>
 )
 

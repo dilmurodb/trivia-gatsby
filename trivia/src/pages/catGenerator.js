@@ -35,26 +35,26 @@ class CatGeneratorPage extends Component {
       })
   }
   render() {
-    const { loading, data } = this.state
+    const { data } = this.state
     console.log(`this is what I need ${data}`)
     return (
       <Layout>
-        <SEO title="MuzicQuiz page" />
-        <h1>Welcome to MusicQuiz</h1>
-        <button onClick={this.fetchData}>click</button>
-        <p>If you'd like to play click the button below</p>
+        <SEO title="RandomCat page" />
+        <h1>Random Cat Pictures</h1>
+        <p>If you'd like to see more please click the button below</p>
+        <button onClick={this.fetchData} style={{ marginBottom: `20px` }}>
+          Next
+        </button>
         <div style={{ maxWidth: `900px`, marginBottom: `1.45rem` }}>
           <div
             style={{
               width: `300px`,
-              height: `200px`,
-              backgroundColor: `lightskyblue`,
+              height: `500px`,
             }}
           >
             <img src={data} alt="new"></img>
           </div>
         </div>
-        <Link to="/">Go back to the homepage</Link>
       </Layout>
     )
   }
