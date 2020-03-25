@@ -1,25 +1,24 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
-import Layout from "./layout"
-import { library } from "@fortawesome/fontawesome-svg-core"
-import { fas } from "@fortawesome/free-solid-svg-icons"
-import { far } from "@fortawesome/free-regular-svg-icons"
-import { fab } from "@fortawesome/free-brands-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-library.add(fab, fas, far)
+// import PropTypes from "prop-types";
+import React from "react";
+// import Layout from "./layout";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import { far } from "@fortawesome/free-regular-svg-icons";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+library.add(fab, fas, far);
 const Footer = () => (
   <div>
     <footer
       style={{
-        background: `black`,
+        background: `black`
       }}
     >
       <div
         style={{
           margin: `0 auto`,
           height: 100,
-          padding: `1.45rem 1.0875rem`,
+          padding: `1.45rem 1.0875rem`
         }}
       >
         <div
@@ -27,7 +26,7 @@ const Footer = () => (
           style={{
             display: `flex`,
             flexDirection: `row`,
-            justifyContent: `center`,
+            justifyContent: `center`
           }}
         >
           <div style={{ marginRight: `10px` }}>
@@ -64,6 +63,6 @@ const Footer = () => (
       </div>
     </footer>
   </div>
-)
+);
 
-export default Footer
+export default Footer;

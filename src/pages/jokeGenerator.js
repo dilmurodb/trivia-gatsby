@@ -1,40 +1,39 @@
-import React, { Component } from "react"
-import { Link } from "gatsby"
+import React, { Component } from "react";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
 class JokeGeneratorPage extends Component {
   state = {
     loading: true,
     error: false,
-    data: [],
-  }
+    data: []
+  };
 
   componentDidMount() {
-    this.fetchData()
+    this.fetchData();
   }
   fetchData = () => {
     fetch("https://icanhazdadjoke.com/", {
       headers: {
-        Accept: "application/json",
-      },
+        Accept: "application/json"
+      }
     })
       .then(res => {
-        return res.json()
+        return res.json();
       })
       .then(jsonData => {
         this.setState({
           data: jsonData.joke,
-          loading: false,
-        })
+          loading: false
+        });
       })
       .catch(error => {
-        console.log(error, "catch the hoop")
-      })
-  }
+        console.log(error, "catch the hoop");
+      });
+  };
   render() {
-    const { data } = this.state
+    const { data } = this.state;
     return (
       <Layout>
         <SEO title="JokeGenerator page" />
@@ -49,15 +48,15 @@ class JokeGeneratorPage extends Component {
               width: `300px`,
               height: `200px`,
               backgroundColor: `lightgrey`,
-              padding: `20px`,
+              padding: `20px`
             }}
           >
             <p>{data}</p>
           </div>
         </div>
       </Layout>
-    )
+    );
   }
 }
 
-export default JokeGeneratorPage
+export default JokeGeneratorPage;

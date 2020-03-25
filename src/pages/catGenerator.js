@@ -1,40 +1,39 @@
-import React, { Component } from "react"
-import { Link } from "gatsby"
+import React, { Component } from "react";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
 class CatGeneratorPage extends Component {
   state = {
     loading: true,
     error: false,
-    data: [],
-  }
+    data: []
+  };
 
   componentDidMount() {
-    this.fetchData()
+    this.fetchData();
   }
   fetchData = () => {
     fetch("https://api.thecatapi.com/v1/images/search", {
       headers: {
-        "x-api-key": "369c4b71-4927-4bea-bd18-161e8cc3d3ba",
-      },
+        "x-api-key": "369c4b71-4927-4bea-bd18-161e8cc3d3ba"
+      }
     })
       .then(res => {
-        return res.json()
+        return res.json();
       })
       .then(jsonData => {
         this.setState({
           data: jsonData[0].url,
-          loading: false,
-        })
+          loading: false
+        });
       })
       .catch(error => {
-        console.log(error, "catch the hoop")
-      })
-  }
+        console.log(error, "catch the hoop");
+      });
+  };
   render() {
-    const { data } = this.state
+    const { data } = this.state;
 
     return (
       <Layout>
@@ -48,15 +47,15 @@ class CatGeneratorPage extends Component {
           <div
             style={{
               width: `300px`,
-              height: `500px`,
+              height: `500px`
             }}
           >
             <img src={data} alt="new"></img>
           </div>
         </div>
       </Layout>
-    )
+    );
   }
 }
 
-export default CatGeneratorPage
+export default CatGeneratorPage;
