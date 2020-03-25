@@ -8,7 +8,7 @@ import SEO from "../components/seo"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Welcome to Trivia Quiz</h1>
+    <h1>Welcome to random creations Web-Page</h1>
     <p>If you'd like to start, please click on one of the categories above.</p>
     <p>Now go build something great.</p>
     <div style={{ maxWidth: `900px`, marginBottom: `1.45rem` }}>
