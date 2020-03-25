@@ -14,7 +14,7 @@ class ActivityGeneratorPage extends Component {
     this.fetchData();
   }
   fetchData = () => {
-    fetch("http://www.boredapi.com/api/activity/")
+    fetch("https://www.boredapi.com/api/activity?type=recreational")
       .then(res => {
         return res.json();
       })
@@ -39,7 +39,7 @@ class ActivityGeneratorPage extends Component {
           If you'd like to see more suggestions please click the button below!
         </p>
         <button onClick={this.fetchData} style={{ marginBottom: `20px` }}>
-          click
+          Next
         </button>
         <div style={{ maxWidth: `900px`, marginBottom: `1.45rem` }}>
           <div
