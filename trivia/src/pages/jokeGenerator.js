@@ -39,20 +39,20 @@ class JokeGeneratorPage extends Component {
     return (
       <Layout>
         <SEO title="CinemaQuiz page" />
-        <h1>Welcome to CinemaQuiz</h1>
-        <button onClick={this.fetchData}>click</button>
-        <p>If you'd like to play click the button below</p>
+        <h1>Random Jokes</h1>
+        <p>To read more Jokes like this please click the button below</p>
+        <button onClick={this.fetchData} style={{ marginBottom: `20px` }}>
+          Next
+        </button>
         <div style={{ maxWidth: `900px`, marginBottom: `1.45rem` }}>
           <div
             style={{
               width: `300px`,
               height: `200px`,
-              backgroundColor: `lightskyblue`,
+              backgroundColor: `lightgrey`,
+              padding: `20px`,
             }}
           >
-            {/* {data.map(result => (
-              <p key={result.question}>{result.question}</p>
-            ))} */}
             <p>{data}</p>
           </div>
         </div>

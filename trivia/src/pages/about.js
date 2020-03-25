@@ -7,8 +7,12 @@ import SEO from "../components/seo"
 const CinemaPage = () => (
   <Layout>
     <SEO title="Cinema page" />
-    <h1>Welcome to Trivia Quiz About page</h1>
-    <p>If you'd like to play click the button below</p>
+    <h2>Welcome to Randomly Generated Stuff Web-Page</h2>
+    <p>
+      This web-site is for those who is looking for random funny jokes, pictures
+      of cats and some random activity suggestions to make life more fun and
+      exciting
+    </p>
     <Link to="/">Go back to the homepage</Link>
   </Layout>
 )

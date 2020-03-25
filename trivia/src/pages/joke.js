@@ -8,9 +8,9 @@ import SEO from "../components/seo"
 const CinemaPage = () => (
   <Layout>
     <SEO title="Cinema page" />
-    <h1>Welcome to Cinema category</h1>
-    <p>If you'd like to play click the button below</p>
-    <button>
+    <h1>Enjoy Random Jokes</h1>
+    <p>If you'd like to read some funny jokes please click the button below.</p>
+    <button style={{ marginBottom: `20px` }}>
       <Link to="/jokeGenerator">click</Link>
     </button>
     <div style={{ maxWidth: `900px`, marginBottom: `1.45rem` }}>
