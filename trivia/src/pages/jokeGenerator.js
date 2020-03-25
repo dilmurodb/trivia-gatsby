@@ -28,17 +28,16 @@ class JokeGeneratorPage extends Component {
           data: jsonData.joke,
           loading: false,
         })
-        console.log(jsonData)
       })
       .catch(error => {
         console.log(error, "catch the hoop")
       })
   }
   render() {
-    const { loading, data } = this.state
+    const { data } = this.state
     return (
       <Layout>
-        <SEO title="CinemaQuiz page" />
+        <SEO title="JokeGenerator page" />
         <h1>Random Jokes</h1>
         <p>To read more Jokes like this please click the button below</p>
         <button onClick={this.fetchData} style={{ marginBottom: `20px` }}>

@@ -28,7 +28,6 @@ class CatGeneratorPage extends Component {
           data: jsonData[0].url,
           loading: false,
         })
-        console.log(jsonData)
       })
       .catch(error => {
         console.log(error, "catch the hoop")
@@ -36,7 +35,7 @@ class CatGeneratorPage extends Component {
   }
   render() {
     const { data } = this.state
-    console.log(`this is what I need ${data}`)
+
     return (
       <Layout>
         <SEO title="RandomCat page" />

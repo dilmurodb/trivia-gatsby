@@ -24,15 +24,14 @@ class ActivityGeneratorPage extends Component {
           data: jsonData.activity,
           loading: false,
         })
-        console.log(jsonData)
       })
       .catch(error => {
         console.log(error, "catch the hoop")
       })
   }
   render() {
-    const { loading, data } = this.state
-    console.log(`this is what I need ${data}`)
+    const { data } = this.state
+
     return (
       <Layout>
         <SEO title="ActivitySuggestions page" />
@@ -53,7 +52,6 @@ class ActivityGeneratorPage extends Component {
             }}
           >
             <p>{data}</p>
-            {/* <img src={data} alt="new"></img> */}
           </div>
         </div>
       </Layout>
