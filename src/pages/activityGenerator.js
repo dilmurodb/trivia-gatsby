@@ -1,36 +1,35 @@
-import React, { Component } from "react"
-import { Link } from "gatsby"
+import React, { Component } from "react";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
 class ActivityGeneratorPage extends Component {
   state = {
     loading: true,
     error: false,
-    data: [],
-  }
+    data: ""
+  };
 
   componentDidMount() {
-    this.fetchData()
+    this.fetchData();
   }
   fetchData = () => {
     fetch("http://www.boredapi.com/api/activity/")
       .then(res => {
-        return res.json()
+        return res.json();
       })
       .then(jsonData => {
         this.setState({
           data: jsonData.activity,
-          loading: false,
-        })
+          loading: false
+        });
       })
       .catch(error => {
-        console.log(error, "catch the hoop")
-      })
-  }
+        console.log(error, "catch the hoop");
+      });
+  };
   render() {
-    const { data } = this.state
+    const { data } = this.state;
 
     return (
       <Layout>
@@ -48,15 +47,15 @@ class ActivityGeneratorPage extends Component {
               width: `300px`,
               height: `200px`,
               backgroundColor: `lightgrey`,
-              padding: `20px`,
+              padding: `20px`
             }}
           >
             <p>{data}</p>
           </div>
         </div>
       </Layout>
-    )
+    );
   }
 }
 
-export default ActivityGeneratorPage
+export default ActivityGeneratorPage;
